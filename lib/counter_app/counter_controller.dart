@@ -1,0 +1,4 @@
+
+class CounterController extends GetxController {
+
+}
