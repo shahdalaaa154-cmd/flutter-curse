@@ -52,6 +52,7 @@ class SplashScreen extends StatelessWidget {
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 15,
+                    fontWeight: FontWeight.bold,
                   ),
                 ),
 
@@ -120,6 +121,7 @@ class SignInScreen extends StatelessWidget {
                       'PlantSHOP',
                       style: TextStyle(
                         fontSize: 10,
+                        fontWeight: FontWeight.bold,
                         color: Colors.black,
                       ),
                     ),
@@ -133,8 +135,9 @@ class SignInScreen extends StatelessWidget {
                 child: Text(
                   'Sign in to your account',
                   style: TextStyle(
-                  fontSize: 10,
-                    color: Colors.black,
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                    color: Color.fromARGB(255, 27, 68, 28),
                   ),
                 ),
               ),
@@ -145,6 +148,7 @@ class SignInScreen extends StatelessWidget {
               const Text(
                 'Email Address',
                 style: TextStyle(
+                  fontWeight: FontWeight.bold,
                   fontSize: 10,
                 ),
               ),
@@ -159,7 +163,7 @@ class SignInScreen extends StatelessWidget {
                     fontSize: 10,
                   ),
                   border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(0),
+                    borderRadius: BorderRadius.circular(10),
                   ),
                 ),
               ),
@@ -170,6 +174,7 @@ class SignInScreen extends StatelessWidget {
               const Text(
                 'Password',
                 style: TextStyle(
+                  fontWeight: FontWeight.bold,
                   fontSize: 10,
                 ),
               ),
@@ -183,16 +188,33 @@ class SignInScreen extends StatelessWidget {
                     color: Colors.grey,
                     fontSize: 10,
                   ),
-                 
+                 suffixIcon: const Icon(
+                  Icons.visibility_off_outlined,
+                  color: Colors.grey,
+                 ),
                   border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(0),
+                    borderRadius: BorderRadius.circular(10),
                   ),
                 ),
               ),
-
+              
+              Align(
+                alignment: Alignment.centerRight,
+                child: TextButton( 
+                  onPressed: () {},
+                  child: const Text(
+                    'Forgot password?',
+                   style: TextStyle(
+                   color: Colors.grey,
+                   ),
+                  ),
+                ),
+              ),
               Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
+                  Checkbox(value: false, onChanged: (value)  {},
+                  ),
                   const Expanded(
                     child: Padding(
                       padding: EdgeInsets.only(top: 10),
@@ -213,10 +235,12 @@ class SignInScreen extends StatelessWidget {
 
               // Sign in button
               SizedBox(
+                width: double.infinity,
+                height: 50,
                 child: ElevatedButton(
                   onPressed: () {},
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.black,
+                    backgroundColor: const Color.fromARGB(255, 39, 92, 40),
                     foregroundColor: Colors.white,
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(10),
@@ -278,7 +302,7 @@ class SignInScreen extends StatelessWidget {
                       child: const Text(
                         'Create Account',
                         style: TextStyle(
-                          color: Colors.black,
+                          color: Color.fromARGB(255, 38, 90, 40),
                           fontWeight: FontWeight.bold,
                           fontSize: 10,
                         ),
@@ -308,6 +332,7 @@ class SignInScreen extends StatelessWidget {
           text,
           style: TextStyle(
             fontSize: 10,
+            fontWeight: FontWeight.bold,
             color: text == 'f'
                 ? Colors.blue
                 : Colors.red,
@@ -347,6 +372,7 @@ class SignUpScreen extends StatelessWidget {
                       'PlantSHOP',
                       style: TextStyle(
                         fontSize: 10,
+                        fontWeight: FontWeight.bold,
                         color: Colors.black,
                       ),
                     ),
@@ -361,8 +387,9 @@ class SignUpScreen extends StatelessWidget {
                 child: Text(
                   'Crete new account',
                   style: TextStyle(
-                    fontSize: 10,
-                    color: Colors.black,
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                    color: Color.fromARGB(255, 29, 75, 31),
                   ),
                 ),
               ),
@@ -373,6 +400,7 @@ class SignUpScreen extends StatelessWidget {
               const Text(
                 'Email Address',
                 style: TextStyle(
+                  fontWeight: FontWeight.bold,
                   fontSize: 10,
                 ),
               ),
@@ -386,7 +414,7 @@ class SignUpScreen extends StatelessWidget {
                     fontSize: 10,
                   ),
                   border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(0),
+                    borderRadius: BorderRadius.circular(10),
                   ),
                 ),
               ),
@@ -397,6 +425,7 @@ class SignUpScreen extends StatelessWidget {
               const Text(
                 'Password',
                 style: TextStyle(
+                  fontWeight: FontWeight.bold,
                   fontSize: 10,
                 ),
               ),
@@ -411,7 +440,10 @@ class SignUpScreen extends StatelessWidget {
                     color: Colors.grey,
                     fontSize: 10,
                   ),
-                  
+                  suffixIcon: const Icon(
+                  Icons.visibility_off_outlined,
+                  color: Colors.grey,
+                 ),
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(0),
                   ),
@@ -424,11 +456,12 @@ class SignUpScreen extends StatelessWidget {
               const Text(
                 'Confirm Password',
                 style: TextStyle(
+                  fontWeight: FontWeight.bold,
                   fontSize: 10,
                 ),
               ),
 
-              const SizedBox(height: 0),
+              const SizedBox(height: 10),
 
               TextField(
                 decoration: InputDecoration(
@@ -437,8 +470,12 @@ class SignUpScreen extends StatelessWidget {
                     color: Colors.grey,
                     fontSize: 10,
                   ),
+                  suffixIcon: const Icon(
+                  Icons.visibility_off_outlined,
+                  color: Colors.grey,
+                 ),
                   border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(0),
+                    borderRadius: BorderRadius.circular(10),
                   ),
                 ),
               ),
@@ -449,6 +486,8 @@ class SignUpScreen extends StatelessWidget {
               Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
+                  Checkbox(value:false, onChanged:(value) {},
+                  ),
                   const Expanded(
                     child: Padding(
                       padding: EdgeInsets.only(top: 10),
@@ -469,10 +508,12 @@ class SignUpScreen extends StatelessWidget {
 
               // Sign up button
               SizedBox(
+                width: double.infinity,
+                height: 50,
                 child: ElevatedButton(
                   onPressed: () {},
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.black,
+                    backgroundColor: const Color.fromARGB(255, 33, 99, 35),
                     foregroundColor: Colors.white,
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(10),
@@ -528,7 +569,7 @@ class SignUpScreen extends StatelessWidget {
                       child: const Text(
                         'Back to Sign In',
                         style: TextStyle(
-                          color: Colors.black,
+                          color: Color.fromARGB(255, 31, 70, 32),
                           fontWeight: FontWeight.bold,
                           fontSize: 10,
                         ),
@@ -559,6 +600,7 @@ class SignUpScreen extends StatelessWidget {
           text,
           style: TextStyle(
             fontSize: 10,
+            fontWeight: FontWeight.bold,
             color: text == 'f'
                 ? Colors.blue
                 : Colors.red,
